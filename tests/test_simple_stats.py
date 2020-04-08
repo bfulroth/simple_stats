@@ -21,6 +21,21 @@ def sample_1d_data():
     return test_1d_arr
 
 
+def test_ecdf_param_is_1d_numpy_arr_fail():
+    """Ensure that a TypeError is raised if the wrong data type is passed to the ecdf function"""
+
+    wrong_type = 'Wrong_type'
+
+    with pytest.raises(TypeError):
+        result_x, result_y = ecdf(wrong_type)
+
+
+def test_ecdf_param_is_1d_numpy_arr_pass(sample_1d_data):
+    """Ensure that a TypeError is NOT raised if an 1d numpy array is passed to the ecdf function"""
+
+    result_x, result_y = ecdf(sample_1d_data)
+
+
 def test_ecdf_return_2_arr(sample_1d_data):
     """Test that the return value of the ecdf function is that of two 1d numpy arrays"""
 

@@ -7,6 +7,10 @@ def ecdf(data):
     :return Two 1D arrays for plotting the ECDF
     """
 
+    # Check that the passed in parameter is a 1D array
+    if not isinstance(data, np.ndarray):
+        raise TypeError('The passed in parameter must be a 1D numpy array or DataFrame series.')
+
     # Number of data points: n
     n = len(data)
 
