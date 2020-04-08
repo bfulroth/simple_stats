@@ -36,7 +36,7 @@ def pearson_r(x, y):
 
     # Check if the lengths of the arrays are equal.
 
-    if len(x != len(y)):
+    if len(x) != len(y):
         raise RuntimeError("The numpy arrays x and y must be of the same length.")
 
     corr_mat = np.corrcoef(x, y)
