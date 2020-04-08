@@ -31,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="A Python package ce containing methods for EDA, bootstrapping, and hypothesis testing",
+    description="A Python package containing methods for EDA, bootstrapping, and hypothesis testing",
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
