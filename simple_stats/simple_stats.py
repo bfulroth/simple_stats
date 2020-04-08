@@ -21,3 +21,22 @@ def ecdf(data):
     y = np.arange(1, n + 1) / n
 
     return x, y
+
+
+def pearson_r(x, y):
+    """Compute Pearson correlation coefficient between two arrays."""
+    # Compute correlation matrix: corr_mat
+
+    # Check it the two arguments are np arrays
+    if not isinstance(np.ndarray, x):
+        raise TypeError("x passed in argument must be a 1d numpy array.")
+
+    if not isinstance(np.ndarray, y):
+        raise TypeError("y passed in argument must be a 1d numpy array.")
+
+    corr_mat = np.corrcoef(x, y)
+
+    # Return entry [0,1]
+    return corr_mat[0,1]
+
+
