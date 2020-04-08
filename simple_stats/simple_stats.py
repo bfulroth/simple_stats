@@ -9,7 +9,7 @@ def ecdf(data):
 
     # Check that the passed in parameter is a 1D array
     if not isinstance(data, np.ndarray):
-        raise TypeError('The passed in parameter must be a 1D numpy array or DataFrame series.')
+        raise TypeError('The passed in argument must be a 1D numpy array or DataFrame series.')
 
     # Number of data points: n
     n = len(data)
@@ -28,11 +28,16 @@ def pearson_r(x, y):
     # Compute correlation matrix: corr_mat
 
     # Check it the two arguments are np arrays
-    if not isinstance(np.ndarray, x):
+    if not isinstance(x, np.ndarray):
         raise TypeError("x passed in argument must be a 1d numpy array.")
 
-    if not isinstance(np.ndarray, y):
+    if not isinstance(y, np.ndarray):
         raise TypeError("y passed in argument must be a 1d numpy array.")
+
+    # Check if the lengths of the arrays are equal.
+
+    if len(x != len(y)):
+        raise RuntimeError("The numpy arrays x and y must be of the same length.")
 
     corr_mat = np.corrcoef(x, y)
 
