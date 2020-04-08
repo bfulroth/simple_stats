@@ -16,7 +16,7 @@ simple_stats
 
 
 
-A Python package ce containing methods for EDA, bootstrapping, and hypothesis testing
+A Python package containing methods for EDA, bootstrapping, and hypothesis testing
 
 
 * Free software: MIT license
